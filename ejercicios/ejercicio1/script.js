@@ -8,6 +8,7 @@
 /*-----------------------------------------------------------------------------------------------------------------------------------------------*/
     // let titulo = document.getElementById('titulo') //esto nos sirve para extraer el id de un elemento del HTML
     // console.log(titulo)
+
 /*-----------------------------------------------------------------------------------------------------------------------------------------------*/
 
 
@@ -57,19 +58,21 @@
  * 6. Mostrar su contenido en consola
  * 7. Mostrar el contenido de los atributos src y alt por consola
  */
+/*-----------------------------------------------------------------------------------------------------------------------------------------------*/
 
-let titulo = document.querySelector('#titulo')
-console.log(titulo)
+    // let titulo = document.querySelector('#titulo')
+    // console.log(titulo)
 
-let div1 = document.querySelector('.main-div')
-console.log(div1)
+    // let div1 = document.querySelector('.main-div')
+    // console.log(div1)
 
-let img = document.querySelector('img')
-console.log(img)
+    // let img = document.querySelector('img')
+    // console.log(img)
 
-console.log(img.src)
-console.log(img.alt)
+    // console.log(img.src)
+    // console.log(img.alt)
 
+/*-----------------------------------------------------------------------------------------------------------------------------------------------*/
 
 
 

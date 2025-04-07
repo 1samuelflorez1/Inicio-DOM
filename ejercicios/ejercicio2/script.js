@@ -7,8 +7,16 @@
  * 2. Cambiar el titulo por "Hola Mundo"
  * 3. Ver el efecto en el navegador
  */
+/*-----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+let titulo = document.querySelector('#titulo')
+titulo.innerText = ("Espacio")  //este es un ejemplo de como se puede cambiar los elementos del html desde js
+//teniendo ya seleccionado lo que queremos cambiar, en este caso el titulo
 
 
+console.log(titulo)
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------*/
 
 // 2.2 Cambiar el atributo src de la imagen
 /**
@@ -17,6 +25,14 @@
  * 3. Ver el efecto en el navegador
  */
 
+/*-----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+let img = document.querySelector('img')
+img.src = "https://wallpapers.com/images/hd/void-5sm9tokk2youui90.jpg"
+console.log(img)
+
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------*/
 
 
 // 2.3 Cambiar la clase del div
@@ -25,6 +41,14 @@
  * 2. Cambiar su clase por "new-div"
  * 3. Ver el efecto en el navegador
  */
+/*-----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+// let div = document.querySelector('.main-div')
+// div.className = 'new-div'
+// console.log(div)
+
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------*/
 
  
 
@@ -42,6 +66,22 @@
  * 8. Ver el efecto en el navegador
  */
 
+/*-----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+let enlace = document.querySelector('#enlace')  //esto me sirve para comenzar con lso cambios de algo especifico (un enlace)
+console.log(enlace.getAttribute('href')) //esto nos sirve para extraer el attribute de href para modificarlo
+enlace.setAttribute('href', 'https://www.icesi.edu.co') //esto me sirve para modificar lo que este ubicado de primero
+console.log(enlace)
+enlace.innerText = "Universidad Icesi" //esto es para cambiar el texto de lo que se presenta en el innertext del enlace
+enlace.setAttribute('target', '_blank') //esto es para cambiar el target del href (del enlace)
+enlace.setAttribute('class', 'boton') //esto sirve igual para cambiar la class o añadir una class al enlace
+enlace.removeAttribute('class') //esto es para quitar  la clase que le quitamos 
+console.log(enlace)
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
 
 // 2.5 Cambiar el estilo del div
 /**
@@ -57,7 +97,16 @@
  * 3. Ver el efecto en el navegador
  */
 
+/*-----------------------------------------------------------------------------------------------------------------------------------------------*/
 
 
+let div = document.querySelector('.main-div')
+div.style.backgroundColor = "green"
+div.style.color = "white"
+div.style.fontSize = "30px"
+div.style.textAlign = "center"
+div.style.padding = "20px"
+div.style.borderRadius = "10px"
+console.log(div)
 
 

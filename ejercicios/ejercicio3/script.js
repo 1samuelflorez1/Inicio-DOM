@@ -17,3 +17,34 @@
     * 6. Si los inputs no estan vacios, guarda los valores en el arreglo usuario
     * 8. Muestra por consola el arreglo usuario
  */
+
+
+let Nombre =document.querySelector('#nombre')  //estos cuatro se realizan para extraer los espacios del form para extraer su informacion
+let Apellido = document.querySelector('#apellido')
+let Email = document.querySelector('#email')
+let Boton = document.querySelector('#boton')
+
+console.log(Nombre)
+console.log(Apellido)
+console.log(Email)
+console.log(Boton)
+
+function procesarUsuario(e){
+   e.preventDefault()
+   let usuario = []
+   let nombreValor = Nombre.value
+   let apellidoValor = Apellido.value
+   let nombreCompleto = nombreValor + "" + apellidoValor
+   let emailValor = Email.value
+   if ((nombreValor === "") || (apellidoValor === "") || (emailValor === "")) {
+      alert("Porfavor ingresa todos los campos requeridos")
+   }
+   else{
+      usuario.push(nombreValor, apellidoValor, emailValor)
+      console.log("arreglo de usuario: ", usuario)
+      alert("Nombre completo: "+ nombreCompleto+ "y el email es: "+ emailValor)
+   }
+
+}
+
+Boton.addEventListener('click', procesarUsuario)
