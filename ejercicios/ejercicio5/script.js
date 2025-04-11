@@ -17,9 +17,23 @@ const contenedor = document.querySelector('#contenedor')
 const botonAgregar = document.querySelector('#botonAgregar')
 const botonEliminar = document.querySelector('#botonEliminar')
 
-console.log(contenedor)
-console.log(botonAgregar)
-console.log(botonEliminar)
+function crearParrafo(){
+    let parrafo = document.createElement('p')  //esto nos sirve para crear un nuevo elemento, en este caso un parrafo (p)
+    parrafo.innerText = "Soy un nuevo parrafo"  //aqui se le asigna un valor al nuevo parrafo
+    contenedor.appendChild(parrafo)
+}
+
+botonAgregar.addEventListener('click', crearParrafo)
+
+botonEliminar.addEventListener('click', function(){
+    let elementos = document.querySelector('p')
+    if (!elementos){
+        alert("Me quede sin elementos")
+        return
+    }
+    elementos.remove()
+})
+
 
 
 
