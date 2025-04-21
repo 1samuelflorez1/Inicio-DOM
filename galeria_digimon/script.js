@@ -20,26 +20,34 @@ const digimones = [
  **/
 
 
-let galeria = document.querySelector('#galeria')
+const galeria = document.querySelector("#galeria");
 
-for (const digimon of digimones){
+for (let index = 1; index < 100; index++) {
+  fetch("https://digi-api.com/api/v1/digimon/" + index)
+    .then((response) => response.json())
+    .then(digimon => {
+      const div = document.createElement("div");
+      div.classList.add("digimon");
 
-    let div = document.createElement('div')
-    div.className = 'digimon'
-    let imagen = document.createElement('img')
-    imagen.setAttribute('src', digimon)
-    div.appendChild(imagen)
-    let boton = document.createElement('button')
-    boton.innerText = "Eliminar"
-    boton.addEventListener('click', function(e){
-        let elemento = e.target.parentElement
-        elemento.remove()
-        
-    })
+      const elemento = document.createElement("img");
+      elemento.setAttribute("src", digimon.images[0].href);
+      div.append(elemento);
 
-    div.appendChild(boton)
-    galeria.append(div)
+      const btnFavoritos = document.createElement("button");
+      btnFavoritos.innerText = "Eliminar Digimon";
+      div.append(btnFavoritos);
 
+      galeria.append(div);
+    });
+}
+
+const botones = document.querySelectorAll("button");
+
+for (const boton of botones) {
+  boton.addEventListener("click", function (e) {
+    elemento = e.target.parentElement;
+    elemento.remove();
+  });
 }
 
 

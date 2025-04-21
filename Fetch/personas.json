@@ -1,0 +1,14 @@
+[
+  {
+    "nombre": "Pedro",
+    "edad": 25,
+    "esCasado": false,
+    "estatura": 1.75
+  },
+  {
+    "nombre": "Ana",
+    "edad": 40,
+    "esCasado": true,
+    "estatura": 1.64
+  }
+]
